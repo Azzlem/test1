@@ -1,6 +1,6 @@
 import json
-from class_transation import Transaction
-import operator
+from class_transation import *
+
 
 
 def open_file():
@@ -38,6 +38,7 @@ def trans_file():
 
     return list_of_transactions
 
+
 def sort_date():
     a = {}
     for el in trans_file():
@@ -46,4 +47,23 @@ def sort_date():
     b = sorted(a.keys(), reverse=True)
     b = b[:5]
     return b
+
+
+def change_(name: str):
+    if name == None:
+        return ""
+    if len(name.split()) == 2:
+        return name.split()[0]
+    if len(name.split()) == 3:
+        return name.split()[0] + " " + name.split()[1]
+
+def change_two(name: str):
+    if name == None:
+        return ""
+    if len(name.split()) == 2:
+        acc_num = name.split()[1]
+        return acc_num[:4] + " " + acc_num[4:6] + "** **** " + acc_num[12:]
+    if len(name.split()) == 3:
+        acc_num_2 = name.split()[2]
+        return acc_num_2[:4] + " " + acc_num_2[4:6] + "** **** " + acc_num_2[12:]
 

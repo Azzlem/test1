@@ -1,4 +1,4 @@
-from src.utils import trans_file
+from src.utils import *
 trans_file().sort(key=lambda x: x.name)
 
 a = {}
