@@ -16,8 +16,6 @@ class Transaction():
     def get_descr(self):
         date = self.date[8:10] + "." + self.date[5:7] + "." + self.date[:4]
         from_one = change_(self.from_)
-        # from_one = "" if self.from_ == None else self.from_.split()[0]
-        # from_two = "" if self.from_ == None else self.from_.split()[1][:6] + 6 * "*" + self.from_.split()[1][-4:]
         from_two = change_two(self.from_)
         to_to = 2 * "*" + self.to_[-4:]
         return f'{date} {self.description}\n' \
