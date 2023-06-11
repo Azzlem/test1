@@ -23,3 +23,6 @@ class Transaction():
     def state_prof(self):
         return True if self.state == "EXECUTED" else False
 
+    def date_up(self):
+        return self.date[8:10] + "." + self.date[5:7] + "." + self.date[:4]
+

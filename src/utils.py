@@ -38,3 +38,12 @@ def trans_file():
 
     return list_of_transactions
 
+def sort_date():
+    a = {}
+    for el in trans_file():
+        if el.state_prof() == True:
+            a[el.date] = el.get_descr()
+    b = sorted(a.keys(), reverse=True)
+    b = b[:5]
+    return b
+
