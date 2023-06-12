@@ -26,7 +26,7 @@ class Transaction_():
         from_two = change_two(self.from_)
         to_to = 2 * "*" + self.to_[-4:]
         return f'{date} {self.description}\n' \
-               f'{from_one} {from_two} -> {to_to}\n' \
+               f'{from_one} {from_two} -> Счет {to_to}\n' \
                f'{self.amount} {self.name}\n'
 
     def state_prof(self):
