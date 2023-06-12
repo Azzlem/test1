@@ -5,7 +5,7 @@ from src.func_prog import fix_dict
 def trans_file():
     """
     Функция создания списков объектов класса
-    :return: list
+    :return: список экземпляров класса
     """
     list_of_transactions = []
     for elem in fix_dict():
@@ -23,4 +23,3 @@ def trans_file():
         )
 
     return list_of_transactions
-

@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "test1"
+version = "0.1.0"
+description = "testing"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.10.6"
+pytest = "^7.3.2"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest-cov = "^4.1.0"
+pytest = "^7.3.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
