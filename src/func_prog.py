@@ -1,5 +1,5 @@
 import json
-from class_transation import *
+
 
 
 def open_file():
@@ -20,28 +20,6 @@ def fix_dict():
 
     return true_list
 
-
-def trans_file():
-    """
-    Функция создания списков объектов класса
-    :return: list
-    """
-    list_of_transactions = []
-    for elem in fix_dict():
-        list_of_transactions.append(Transaction(
-            elem["id"],
-            elem["state"],
-            elem["date"],
-            elem["operationAmount"]["amount"],
-            elem["operationAmount"]["currency"]["name"],
-            elem["operationAmount"]["currency"]["code"],
-            elem["description"],
-            elem["to"],
-            elem.get("from")
-        )
-        )
-
-    return list_of_transactions
 
 
 def change_(account_details: str):
@@ -72,3 +50,4 @@ def change_two(account_details: str):
     if len(account_details.split()) == 3:
         acc_num_2 = account_details.split()[2]
         return acc_num_2[:4] + " " + acc_num_2[4:6] + "** **** " + acc_num_2[12:]
+

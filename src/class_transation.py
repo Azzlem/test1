@@ -1,7 +1,7 @@
-from utils import *
+from func_prog import *
 
 
-class Transaction():
+class Transaction_():
     def __init__(self, id_, state, date, amount, name, code, description, to_, from_=""):
         self.id = id_
         self.state = state
